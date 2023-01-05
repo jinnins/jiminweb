@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_wrapper.dart';
-
-import 'mypage.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jiminweb/resource/colors.dart';
+import 'package:jiminweb/view/root.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const AppTheme()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppTheme extends StatelessWidget {
+  const AppTheme({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'PORTFOLIO',
       theme: ThemeData(
-        primaryColor: Colors.deepPurple,
-        textTheme: TextTheme(
-          bodyMedium: TextStyle(
-            fontSize: 30,
-            color: Colors.white,
-          )
-        )
+        brightness: Brightness.dark,
+        primaryColor: AppColors().primaryColor,
       ),
-      home: MyPage(),
+      home: const RootScreen(),
     );
   }
 }
