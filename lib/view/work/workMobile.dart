@@ -34,7 +34,7 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
                       color: AppColors().textColor,
                       letterSpacing: 1,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18),
+                      fontSize: 25),
                 )
               ]),
         ),
@@ -70,11 +70,6 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
                 mainAxisCellCount: 1,
                 child: Tile(index: 2),
               ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: Tile(index: 3),
-              ),
             ],
           ),
         ),
@@ -85,6 +80,14 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
   Tile({required int index}) {
     return InkWell(
       onTap: () {
+        if(index == 0){
+          showPopup(context, "test", "assets/svg/library.png", "des test");
+          }
+        else if(index == 1){
+          showPopup(context, "test", "assets/svg/mobile.png", "des test");
+        }else if(index == 2){
+          showPopup(context, "test", "assets/svg/ecd.png", "des test");
+        }
       },
       onHover: (bool) {
         if (bool) {
@@ -193,4 +196,58 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
       }),
     );
   }
+}
+
+void showPopup(context, title, image, description) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return Dialog(
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.7,
+          height: 380,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10), color: Colors.white),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  image,
+                  width: 350,
+                  height: 250,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                title,
+                style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Text(
+                  description,
+                  maxLines: 3,
+                  style: TextStyle(fontSize: 15, color: Colors.grey[500]),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              ElevatedButton.icon(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.close),
+                label: const Text('close'),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }

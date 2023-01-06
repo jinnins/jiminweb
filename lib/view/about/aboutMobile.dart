@@ -110,7 +110,7 @@ class _AboutMobileState extends State<AboutMobile> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
+                      padding: const EdgeInsets.only(top: 10.0),
                       child: GridView.count(
                           crossAxisCount: 2,
                           shrinkWrap: true,
@@ -119,7 +119,7 @@ class _AboutMobileState extends State<AboutMobile> {
                             Row(
                               children: [
                                 Icon(Icons.arrow_right),
-                                Text(' Flutter',
+                                Text(Strings.tech1,
                                     style: GoogleFonts.robotoFlex(
                                       color: AppColors().textLight,
                                       letterSpacing: 1,

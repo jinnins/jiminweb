@@ -20,9 +20,9 @@ class _ExperienceWebState extends State<ExperienceWeb> {
   Widget build(BuildContext context) {
     List<ExperienceModel> experienceList = [
       ExperienceModel(
-          desig: Strings.expDesig3,
-          compName: Strings.expCompName3,
-          duration: Strings.expDur3,
+          desig: Strings.expDesig1,
+          compName: Strings.expCompName1,
+          duration: Strings.expDur1,
           points: Column(
             children: [
               Padding(
@@ -45,7 +45,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                             color: AppColors().textLight,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 14,
+                            fontSize: 20,
                             fontFamily: 'sfmono'),
                       ),
                     ),
@@ -72,7 +72,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                             color: AppColors().textLight,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 14,
+                            fontSize: 20,
                             fontFamily: 'sfmono'),
                       ),
                     ),
@@ -99,185 +99,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                             color: AppColors().textLight,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          )),
-      ExperienceModel(
-          desig: Strings.expDesig2,
-          compName: Strings.expCompName2,
-          duration: Strings.expDur2,
-          points: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout2,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout2_2,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout2_3,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          )),
-      ExperienceModel(
-          desig: Strings.expDesig1,
-          compName: Strings.expCompName1,
-          duration: Strings.expDur1,
-          points: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout3,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout3_2,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.35,
-                      child: Text(
-                        Strings.expAbout3_3,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 14,
+                            fontSize: 20,
                             fontFamily: 'sfmono'),
                       ),
                     ),
@@ -311,7 +133,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                             color: Colors.white,
                             letterSpacing: 1,
                             fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                            fontSize: 30),
                       )
                     ]),
               ),
@@ -323,11 +145,10 @@ class _ExperienceWebState extends State<ExperienceWeb> {
               )
             ],
           ),
-          Consumer(builder: (context, ref, child) {
-            var data = ref.watch(selectedExpProvider);
-            return Container(
+          Container(
               width: AppClass().getMqWidth(context) * 0.6,
               margin: EdgeInsets.only(top: 30.0, left: 30.0),
+              color: Colors.transparent,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -336,93 +157,6 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        InkWell(
-                          onTap: () {
-                            ref.read(selectedExpProvider.notifier).state = 0;
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                                color: data == 0
-                                    ? AppColors().cardColor
-                                    : Colors.transparent,
-                                border: Border(
-                                    left: BorderSide(
-                                        color: data == 0
-                                            ? AppColors().neonColor
-                                            : Colors.white,
-                                        width: 2))),
-                            child: Text(
-                              'Netaccess',
-                              style: TextStyle(
-                                  color: data == 0
-                                      ? AppColors().neonColor
-                                      : AppColors().textLight,
-                                  letterSpacing: 1,
-                                  height: 1.5,
-                                  fontSize: 14,
-                                  fontFamily: 'sfmono'),
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            ref.read(selectedExpProvider.notifier).state = 1;
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                                color: data == 1
-                                    ? AppColors().cardColor
-                                    : Colors.transparent,
-                                border: Border(
-                                    left: BorderSide(
-                                        color: data == 1
-                                            ? AppColors().neonColor
-                                            : Colors.white,
-                                        width: 2))),
-                            child: Text(
-                              'Rax-Tech',
-                              style: TextStyle(
-                                  color: data == 1
-                                      ? AppColors().neonColor
-                                      : AppColors().textLight,
-                                  letterSpacing: 1,
-                                  height: 1.5,
-                                  fontSize: 14,
-                                  fontFamily: 'sfmono'),
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            ref.read(selectedExpProvider.notifier).state = 2;
-                          },
-                          child: Container(
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                                color: data == 2
-                                    ? AppColors().cardColor
-                                    : Colors.transparent,
-                                border: Border(
-                                    left: BorderSide(
-                                        color: data == 2
-                                            ? AppColors().neonColor
-                                            : Colors.white,
-                                        width: 2))),
-                            child: Text(
-                              'Techno Kryon',
-                              style: TextStyle(
-                                  color: data == 2
-                                      ? AppColors().neonColor
-                                      : AppColors().textLight,
-                                  letterSpacing: 1,
-                                  height: 1.5,
-                                  fontSize: 14,
-                                  fontFamily: 'sfmono'),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ),
@@ -434,15 +168,15 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                       children: [
                         RichText(
                           text: TextSpan(
-                              text: experienceList[data].desig,
+                              text: experienceList[0].desig,
                               style: GoogleFonts.roboto(
                                   color: AppColors().textColor,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1,
-                                  fontSize: 20),
+                                  fontSize: 25),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text: ' @${experienceList[data].compName}',
+                                  text: ' @${experienceList[0].compName}',
                                   style: GoogleFonts.roboto(
                                       color: AppColors().neonColor,
                                       fontSize: 20),
@@ -450,7 +184,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                               ]),
                         ),
                         Text(
-                          experienceList[data].duration.toString(),
+                          experienceList[0].duration.toString(),
                           style: TextStyle(
                               color: AppColors().textLight,
                               letterSpacing: 1,
@@ -458,14 +192,13 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                               fontSize: 14,
                               fontFamily: 'sfmono'),
                         ),
-                        experienceList[data].points!
+                        experienceList[0].points!
                       ],
                     ),
                   )
                 ],
               ),
-            );
-          })
+            )
         ],
       ),
     );

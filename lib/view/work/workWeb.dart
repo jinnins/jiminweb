@@ -35,7 +35,7 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
                       color: AppColors().textColor,
                       letterSpacing: 1,
                       fontWeight: FontWeight.bold,
-                      fontSize: 25),
+                      fontSize: 30),
                 )
               ]),
         ),
@@ -70,21 +70,6 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
                 crossAxisCellCount: 1,
                 mainAxisCellCount: 1,
                 child: Tile(index: 2),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: Tile(index: 3),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: Tile(index: 4),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: Tile(index: 5),
               ),
             ],
           ),

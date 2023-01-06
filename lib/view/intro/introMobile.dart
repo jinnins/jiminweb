@@ -7,9 +7,7 @@ import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
 class IntroMobile extends StatefulWidget {
-  final AutoScrollController aScrollController;
-
-  IntroMobile(this.aScrollController, {Key? key}) : super(key: key);
+  IntroMobile({Key? key}) : super(key: key);
 
   @override
   State<IntroMobile> createState() => _IntroMobileState();
@@ -34,7 +32,7 @@ class _IntroMobileState extends State<IntroMobile> {
                   Strings.welcomeTxt,
                   style: TextStyle(
                       color: AppColors().neonColor,
-                      fontSize: 16,
+                      fontSize: 24,
                       fontFamily: 'sfmono'),
                 ),
               ),
@@ -93,30 +91,13 @@ class _IntroMobileState extends State<IntroMobile> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 60.0),
-                child: InkWell(
-                  onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
-                        preferPosition: AutoScrollPosition.begin);
-                  },
-                  child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.45,
-                    decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                        border: Border.all(
-                            color: AppColors().neonColor, width: 1.5)),
-                    child: Center(
-                      child: Text('Check Out My Work!',
-                          style: TextStyle(
-                              color: AppColors().neonColor,
-                              fontSize: 13,
-                              letterSpacing: 1,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'sfmono')),
-                    ),
-                  ),
+                padding: const EdgeInsets.only(top: 30.0),
+                child: Container(
+                  height: AppClass().getMqHeight(context) * 0.09,
+                  width: AppClass().getMqWidth(context) * 0.45,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(3.0)),),
                 ),
               )
             ],

@@ -106,24 +106,6 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                               ),
                             ),
                           ),
-                          PopupMenuItem(
-                            child: InkWell(
-                              onTap: () => widget.controller.scrollToIndex(4,
-                                  preferPosition: AutoScrollPosition.begin),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.phone_rounded, size: 18),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 10.0),
-                                    child: Text(
-                                      'Contact',
-                                      style: GoogleFonts.roboto(),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
                         ],
                         child: Icon(Icons.menu_rounded, size: 25),
                       )
@@ -147,33 +129,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         widget.controller.scrollToIndex(1,
                             preferPosition: AutoScrollPosition.begin);
                       },
-                      onHover: (bol) {
-                        if (bol) {
-                          ref.read(hoverProvider.notifier).state = "aboutTitle";
-                        } else {
-                          ref.read(hoverProvider.notifier).state = "";
-                        }
-                      },
                       child: Padding(
                         padding: const EdgeInsets.only(right: 30.0),
                         child: Row(
                           children: [
-                            Text("01. ",
+                            Text("01. About",
                                 style: TextStyle(
                                     color: AppColors().neonColor,
                                     fontSize: 13,
                                     fontFamily: 'sfmono')),
-                            Consumer(builder: (context, ref, child) {
-                              String state = ref.watch(hoverProvider);
-                              bool isHovered = (state == "aboutTitle");
-                              return Text("About",
-                                  style: TextStyle(
-                                      color: isHovered
-                                          ? AppColors().neonColor
-                                          : AppColors().textColor,
-                                      fontSize: 13,
-                                      fontFamily: 'sfmono'));
-                            }),
                           ],
                         ),
                       ),
@@ -183,33 +147,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         widget.controller.scrollToIndex(2,
                             preferPosition: AutoScrollPosition.begin);
                       },
-                      onHover: (bol) {
-                        if (bol) {
-                          ref.read(hoverProvider.notifier).state = "expTitle";
-                        } else {
-                          ref.read(hoverProvider.notifier).state = "";
-                        }
-                      },
                       child: Padding(
                         padding: const EdgeInsets.only(right: 30.0),
                         child: Row(
                           children: [
-                            Text("02. ",
+                            Text("02. Experience",
                                 style: TextStyle(
                                     color: AppColors().neonColor,
                                     fontSize: 13,
                                     fontFamily: 'sfmono')),
-                            Consumer(builder: (context, ref, child) {
-                              String state = ref.watch(hoverProvider);
-                              bool isHovered = (state == "expTitle");
-                              return Text("Experience",
-                                  style: TextStyle(
-                                      color: isHovered
-                                          ? AppColors().neonColor
-                                          : AppColors().textColor,
-                                      fontSize: 13,
-                                      fontFamily: 'sfmono'));
-                            }),
                           ],
                         ),
                       ),
@@ -219,70 +165,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         widget.controller.scrollToIndex(3,
                             preferPosition: AutoScrollPosition.begin);
                       },
-                      onHover: (bol) {
-                        if (bol) {
-                          ref.read(hoverProvider.notifier).state = "workTitle";
-                        } else {
-                          ref.read(hoverProvider.notifier).state = "";
-                        }
-                      },
                       child: Padding(
                         padding: const EdgeInsets.only(right: 30.0),
                         child: Row(
                           children: [
-                            Text("03. ",
+                            Text("03. Work",
                                 style: TextStyle(
                                     color: AppColors().neonColor,
                                     fontSize: 13,
                                     fontFamily: 'sfmono')),
-                            Consumer(builder: (context, ref, child) {
-                              String state = ref.watch(hoverProvider);
-                              bool isHovered = (state == "workTitle");
-
-                              return Text("Work",
-                                  style: TextStyle(
-                                      color: isHovered
-                                          ? AppColors().neonColor
-                                          : AppColors().textColor,
-                                      fontSize: 13,
-                                      fontFamily: 'sfmono'));
-                            }),
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        widget.controller.scrollToIndex(4,
-                            preferPosition: AutoScrollPosition.begin);
-                      },
-                      onHover: (bol) {
-                        if (bol) {
-                          ref.read(hoverProvider.notifier).state =
-                          "contactTitle";
-                        } else {
-                          ref.read(hoverProvider.notifier).state = "";
-                        }
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 30.0),
-                        child: Row(
-                          children: [
-                            Text("04.",
-                                style: TextStyle(
-                                    color: AppColors().neonColor,
-                                    fontSize: 13,
-                                    fontFamily: 'sfmono')),
-                            Consumer(builder: (context, ref, child) {
-                              String state = ref.watch(hoverProvider);
-                              bool isHovered = (state == "contactTitle");
-                              return Text("Contact",
-                                  style: TextStyle(
-                                      color: isHovered
-                                          ? AppColors().neonColor
-                                          : AppColors().textColor,
-                                      fontSize: 13));
-                            }),
                           ],
                         ),
                       ),

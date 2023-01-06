@@ -112,7 +112,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
+                      padding: const EdgeInsets.only(top: 5.0),
                       child: GridView.count(
                           crossAxisCount: 2,
                           shrinkWrap: true,
@@ -194,33 +194,17 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: AppColors().neonColor,
                                       width: 1.5)),
                             ),
-                            InkWell(
-                              onTap: () {},
-                              onHover: (bol) {
-                                if (bol) {
-                                  ref.read(hoverProvider.notifier).state =
-                                  "profilePic";
-                                } else {
-                                  ref.read(hoverProvider.notifier).state = "";
-                                }
-                              },
-                              child: Container(
-                                width: AppClass().getMqWidth(context) * 0.22,
-                                height: AppClass().getMqWidth(context) * 0.22,
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                    BorderRadius.all(Radius.circular(5.0)),
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        colorFilter: ColorFilter.mode(
-                                            AppColors().primaryColor,
-                                            isHovered
-                                                ? BlendMode.lighten
-                                                : BlendMode.color),
-                                        image: AssetImage(
-                                            'assets/svg/profilePic.jpg')),
-                                    color: Colors.transparent),
-                              ),
+                            Container(
+                              width: AppClass().getMqWidth(context) * 0.22,
+                              height: AppClass().getMqWidth(context) * 0.22,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          'assets/svg/profileshot.jpg')),
+                                  color: Colors.transparent),
                             ),
                           ],
                         );

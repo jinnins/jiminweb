@@ -7,9 +7,7 @@ import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
 class IntroWeb extends StatefulWidget {
-  AutoScrollController aScrollController;
-
-  IntroWeb(this.aScrollController, {Key? key}) : super(key: key);
+  IntroWeb({Key? key}) : super(key: key);
 
   @override
   State<IntroWeb> createState() => _IntroWebState();
@@ -34,7 +32,7 @@ class _IntroWebState extends State<IntroWeb> {
                   Strings.welcomeTxt,
                   style: TextStyle(
                       color: AppColors().neonColor,
-                      fontSize: 18,
+                      fontSize: 24,
                       fontFamily: 'sfmono'),
                 ),
               ),
@@ -71,52 +69,35 @@ class _IntroWebState extends State<IntroWeb> {
                 child: Container(
                   width: AppClass().getMqWidth(context) * 0.45,
                   child: RichText(
-                      text: TextSpan(
-                          text: Strings.introAbout,
-                          style: GoogleFonts.roboto(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 18,
-                          ),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: Strings.currentOrgName,
-                              style: GoogleFonts.roboto(
-                                color: AppColors().neonColor,
-                                letterSpacing: 1,
-                                height: 1.5,
-                                fontSize: 18,
-                              ),
-                            )
-                          ])),
+                    text: TextSpan(
+                        text: Strings.introAbout,
+                        style: GoogleFonts.roboto(
+                          color: AppColors().textLight,
+                          letterSpacing: 1,
+                          height: 1.5,
+                          fontSize: 18,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: Strings.currentOrgName,
+                            style: GoogleFonts.roboto(
+                              color: AppColors().neonColor,
+                              letterSpacing: 1,
+                              height: 1.5,
+                              fontSize: 18,
+                            ),
+                          )
+                        ]),
+                  ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 50, bottom: 70),
-                child: InkWell(
-                  onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
-                        preferPosition: AutoScrollPosition.begin);
-                  },
-                  child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.2,
-                    decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                        border: Border.all(
-                            color: AppColors().neonColor, width: 1.5)),
-                    child: Center(
-                      child: Text('Check Out My Work!',
-                          style: TextStyle(
-                              color: AppColors().neonColor,
-                              fontSize: 13,
-                              letterSpacing: 1,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'sfmono')),
-                    ),
-                  ),
+                child: Container(
+                  height: AppClass().getMqHeight(context) * 0.09,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(3.0)),),
                 ),
               )
             ],

@@ -70,11 +70,6 @@ class _WorkWebState extends ConsumerState<WorkTab> {
                 mainAxisCellCount: 1,
                 child: Tile(index: 2),
               ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: Tile(index: 3),
-              ),
             ],
           ),
         ),

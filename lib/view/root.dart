@@ -52,14 +52,7 @@ class _RootScreenState extends ConsumerState<RootScreen> {
             height: AppClass().getMqHeight(context),
             child: Column(
               children: [
-                Consumer(builder: (context, ref, child) {
-                  var isScrollingUp = ref.watch(scrollControlProvider);
-                  return AnimatedOpacity(
-                    opacity: isScrollingUp ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 500),
-                    child: ActionBar(aScrollController),
-                  );
-                }),
+                ActionBar(aScrollController),
                 Expanded(
                   child: () {
                     ScreenType scrType = AppClass().getScreenType(context);
@@ -75,7 +68,7 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                                     key: ValueKey(0),
                                     controller: aScrollController,
                                     index: 0,
-                                    child: IntroContent(aScrollController)),
+                                    child: IntroContent()),
                                 AutoScrollTag(
                                     key: ValueKey(1),
                                     controller: aScrollController,

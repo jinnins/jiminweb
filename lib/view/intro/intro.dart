@@ -8,9 +8,8 @@ import 'introWeb.dart';
 
 
 class IntroContent extends StatefulWidget {
-  AutoScrollController aScrollController;
 
-  IntroContent(this.aScrollController, {Key? key}) : super(key: key);
+  IntroContent({Key? key}) : super(key: key);
 
   @override
   State<IntroContent> createState() => _IntroContentState();
@@ -20,9 +19,9 @@ class _IntroContentState extends State<IntroContent> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      tabView: IntroTab(widget.aScrollController),
-      mobileView: IntroMobile(widget.aScrollController),
-      webView: IntroWeb(widget.aScrollController),
+      tabView: IntroTab(),
+      mobileView: IntroMobile(),
+      webView: IntroWeb(),
     );
   }
 }

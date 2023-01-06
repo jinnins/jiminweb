@@ -7,9 +7,7 @@ import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
 class IntroTab extends StatefulWidget {
-  AutoScrollController aScrollController;
-
-  IntroTab(this.aScrollController, {Key? key}) : super(key: key);
+  IntroTab({Key? key}) : super(key: key);
 
   @override
   State<IntroTab> createState() => _IntroTabState();
@@ -35,7 +33,7 @@ class _IntroTabState extends State<IntroTab> {
                   Strings.welcomeTxt,
                   style: TextStyle(
                       color: AppColors().neonColor,
-                      fontSize: 16,
+                      fontSize: 24,
                       fontFamily: 'sfmono'),
                 ),
               ),
@@ -95,29 +93,12 @@ class _IntroTabState extends State<IntroTab> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 30.0, bottom: 50),
-                child: InkWell(
-                  onTap: () {
-                    widget.aScrollController.scrollToIndex(1,
-                        preferPosition: AutoScrollPosition.begin);
-                  },
-                  child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.25,
-                    decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                        border: Border.all(
-                            color: AppColors().neonColor, width: 1.5)),
-                    child: Center(
-                      child: Text('Check Out My Work!',
-                          style: TextStyle(
-                              color: AppColors().neonColor,
-                              fontSize: 13,
-                              letterSpacing: 1,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'sfmono')),
-                    ),
-                  ),
+                child: Container(
+                  height: AppClass().getMqHeight(context) * 0.09,
+                  width: AppClass().getMqWidth(context) * 0.25,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(3.0)),),
                 ),
               )
             ],
