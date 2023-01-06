@@ -7,9 +7,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jiminweb/view/widget/appBar.dart';
 import 'package:jiminweb/view/widget/leftPane.dart';
 import 'package:jiminweb/view/widget/rightPane.dart';
+import 'package:jiminweb/view/work/work.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import '../controller/generalController.dart';
 import '../resource/appClass.dart';
+import 'about/about.dart';
+import 'experience/experience.dart';
+import 'intro/intro.dart';
 
 class RootScreen extends ConsumerStatefulWidget {
   const RootScreen({Key? key}) : super(key: key);
@@ -67,7 +71,26 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                             child: ListView(
                               controller: aScrollController,
                               children: [
-
+                                AutoScrollTag(
+                                    key: ValueKey(0),
+                                    controller: aScrollController,
+                                    index: 0,
+                                    child: IntroContent(aScrollController)),
+                                AutoScrollTag(
+                                    key: ValueKey(1),
+                                    controller: aScrollController,
+                                    index: 1,
+                                    child: About()),
+                                AutoScrollTag(
+                                    key: ValueKey(2),
+                                    controller: aScrollController,
+                                    index: 2,
+                                    child: Experience()),
+                                AutoScrollTag(
+                                    key: ValueKey(3),
+                                    controller: aScrollController,
+                                    index: 3,
+                                    child: Work()),
                               ],
                             )),
                         scrType == ScreenType.mobile ? SizedBox() : RightPane(),
