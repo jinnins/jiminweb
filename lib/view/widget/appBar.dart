@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import '../../controller/generalController.dart';
 import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
 
@@ -35,8 +34,8 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Image.asset(
                         'assets/svg/kcLogo.png',
-                        width: AppClass().getMqWidth(context) * 0.5,
-                        height: AppClass().getMqHeight(context) * 0.5,
+                        width: AppClass().getMqWidth(context) * 0.9,
+                        height: AppClass().getMqHeight(context) * 0.9,
                       ),
                     )),
                 Expanded(
