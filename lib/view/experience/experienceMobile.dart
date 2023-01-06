@@ -79,33 +79,6 @@ class _ExperienceMobileState extends State<ExperienceMobile> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.arrow_right,
-                        color: AppColors().neonColor,
-                        size: 20,
-                      ),
-                    ),
-                    Container(
-                      width: AppClass().getMqWidth(context) * 0.5,
-                      child: Text(
-                        Strings.expAbout1_3,
-                        style: TextStyle(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 13,
-                            fontFamily: 'sfmono'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ],
           )),
     ];
@@ -137,12 +110,6 @@ class _ExperienceMobileState extends State<ExperienceMobile> {
                       )
                     ]),
               ),
-              Container(
-                height: 0.5,
-                margin: EdgeInsets.only(left: 15),
-                width: AppClass().getMqWidth(context) * 0.2,
-                color: AppColors().textLight,
-              )
             ],
           ),
           Container(

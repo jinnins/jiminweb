@@ -26,10 +26,17 @@ class AppClass {
         tech2: "Flutter",
         tech3: "Dart"),
     WorkModel(
-        projectTitle: "BOM Compare",
+        projectTitle: "산출물 비교 프로그램",
         projectContent:
         '''엑셀 양식에 맞는 설계 산출물 비교 프로그램 개발''',
         tech1: "Algorithm",
+        tech2: ".Net/C#",
+        tech3: " "),
+    WorkModel(
+        projectTitle: "CAD 기능개발",
+        projectContent:
+        '''타 부서와 업무 협업을 통한 기능 개발''',
+        tech1: "Windows",
         tech2: ".Net/C#",
         tech3: " "),
   ];

@@ -46,12 +46,6 @@ class _AboutMobileState extends State<AboutMobile> {
                       )
                     ]),
               ),
-              Container(
-                height: 0.5,
-                margin: EdgeInsets.only(left: 15),
-                width: AppClass().getMqWidth(context) * 0.2,
-                color: AppColors().textLight,
-              )
             ],
           ),
           Row(

@@ -70,6 +70,11 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
                 mainAxisCellCount: 1,
                 child: Tile(index: 2),
               ),
+              StaggeredGridTile.count(
+                crossAxisCellCount: 1,
+                mainAxisCellCount: 1,
+                child: Tile(index: 3),
+              ),
             ],
           ),
         ),
@@ -81,12 +86,14 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
     return InkWell(
       onTap: () {
         if(index == 0){
-          showPopup(context, "test", "assets/svg/library.png", "des test");
+          showPopup(context, "Library 모듈", "assets/svg/library.png", " ");
           }
         else if(index == 1){
-          showPopup(context, "test", "assets/svg/mobile.png", "des test");
+          showPopup(context, "CrossPlatform 개발", "assets/svg/mobile.png", " ");
         }else if(index == 2){
-          showPopup(context, "test", "assets/svg/ecd.png", "des test");
+          showPopup(context, "산출물 비교 프로그램", "assets/svg/ecd.png", " ");
+        }else if(index == 3){
+          showPopup(context, "CAD 기능개발", "assets/svg/cadvizor.png", " ");
         }
       },
       onHover: (bool) {
@@ -207,7 +214,7 @@ void showPopup(context, title, image, description) {
           width: MediaQuery.of(context).size.width * 0.7,
           height: 380,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.white),
+              borderRadius: BorderRadius.circular(10), color: AppColors().primaryColor),
           child: Column(
             children: [
               ClipRRect(
@@ -236,13 +243,6 @@ void showPopup(context, title, image, description) {
                   style: TextStyle(fontSize: 15, color: Colors.grey[500]),
                   textAlign: TextAlign.center,
                 ),
-              ),
-              ElevatedButton.icon(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.close),
-                label: const Text('close'),
               ),
             ],
           ),

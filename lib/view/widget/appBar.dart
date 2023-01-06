@@ -34,7 +34,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Image.asset(
-                        'assets/svg/appLogo.png',
+                        'assets/svg/kcLogo.png',
                         width: AppClass().getMqWidth(context) * 0.5,
                         height: AppClass().getMqHeight(context) * 0.5,
                       ),

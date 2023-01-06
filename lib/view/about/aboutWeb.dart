@@ -48,12 +48,6 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                       )
                     ]),
               ),
-              Container(
-                height: 0.5,
-                margin: EdgeInsets.only(left: 15),
-                width: AppClass().getMqWidth(context) * 0.2,
-                color: AppColors().textLight,
-              )
             ],
           ),
           Row(

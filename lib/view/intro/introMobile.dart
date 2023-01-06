@@ -32,7 +32,7 @@ class _IntroMobileState extends State<IntroMobile> {
                   Strings.welcomeTxt,
                   style: TextStyle(
                       color: AppColors().neonColor,
-                      fontSize: 24,
+                      fontSize: 27,
                       fontFamily: 'sfmono'),
                 ),
               ),

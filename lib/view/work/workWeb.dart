@@ -71,6 +71,11 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
                 mainAxisCellCount: 1,
                 child: Tile(index: 2),
               ),
+              StaggeredGridTile.count(
+                crossAxisCellCount: 1,
+                mainAxisCellCount: 1,
+                child: Tile(index: 3),
+              ),
             ],
           ),
         ),
@@ -81,6 +86,16 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
   Tile({required int index}) {
     return InkWell(
       onTap: () {
+        if(index == 0){
+          showPopup(context, "Library 모듈", "assets/svg/library.png", " ");
+        }
+        else if(index == 1){
+          showPopup(context, "CrossPlatform 개발", "assets/svg/mobile.png", " ");
+        }else if(index == 2){
+          showPopup(context, "산출물 비교 프로그램", "assets/svg/ecd.png", " ");
+        }else if(index == 3){
+          showPopup(context, "CAD 기능개발", "assets/svg/cadvizor.png", " ");
+        }
       },
       onHover: (bool) {
         if (bool) {
@@ -189,4 +204,52 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
       }),
     );
   }
+}
+
+
+void showPopup(context, title, image, description) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return Dialog(
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.7,
+          height: 580,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10), color: AppColors().primaryColor),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  image,
+                  width: 450,
+                  height: 350,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                title,
+                style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Text(
+                  description,
+                  maxLines: 3,
+                  style: TextStyle(fontSize: 15, color: Colors.grey[500]),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
