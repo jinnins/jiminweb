@@ -116,7 +116,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
           }
           return Row(
             children: [
-              Expanded(child: Image.asset('assets/svg/appLogo.png')),
+              Expanded(child: Image.asset('assets/svg/kcLogo.png')),
               Expanded(
                 flex: 9,
                 child: Row(

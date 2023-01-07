@@ -85,16 +85,11 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
   Tile({required int index}) {
     return InkWell(
       onTap: () {
-        if(index == 0){
-          showPopup(context, "Library 모듈", "assets/svg/library.png", " ");
-          }
-        else if(index == 1){
-          showPopup(context, "CrossPlatform 개발", "assets/svg/mobile.png", " ");
-        }else if(index == 2){
-          showPopup(context, "산출물 비교 프로그램", "assets/svg/ecd.png", " ");
-        }else if(index == 3){
-          showPopup(context, "CAD 기능개발", "assets/svg/cadvizor.png", " ");
-        }
+        showPopup(
+            context,
+            AppClass().projectList[index].projectTitle.toString(),
+            AppClass().projectImageList[index].toString(),
+            AppClass().projectList[index].projectContent.toString());
       },
       onHover: (bool) {
         if (bool) {
@@ -214,7 +209,8 @@ void showPopup(context, title, image, description) {
           width: MediaQuery.of(context).size.width * 0.7,
           height: 380,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: AppColors().primaryColor),
+              borderRadius: BorderRadius.circular(10),
+              color: AppColors().primaryColor),
           child: Column(
             children: [
               ClipRRect(

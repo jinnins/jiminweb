@@ -11,16 +11,23 @@ class AppClass {
   static BuildContext? lastContext;
   ScrollController controller = ScrollController();
 
+  List<String> projectImageList = [
+    "assets/svg/library.png",
+    "assets/svg/mobile.png",
+    "assets/svg/ecd.png",
+    "assets/svg/cadvizor.png",
+  ];
+
   List<WorkModel> projectList = [
     WorkModel(
-        projectTitle: "CADvizor Library",
+        projectTitle: "CAD Library Module",
         projectContent:
         "AWS/MongoDB 구축 및 마이그레이션, Library 모듈 개발",
         tech1: "Windows",
         tech2: ".Net/C#",
         tech3: "MongoDB"),
     WorkModel(
-        projectTitle: "CADvizor Mobile",
+        projectTitle: "CAD Mobile/Web",
         projectContent: "Github 및 Github action을 통한 CI/CD 파이프라인 구축, 라이브러리 및 도면 뷰어 웹/앱 개발",
         tech1: "Cross Platform",
         tech2: "Flutter",
