@@ -47,27 +47,25 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         color: AppColors().cardColor,
                         itemBuilder: (c) => <PopupMenuEntry>[
                           PopupMenuItem(
-                            child: Container(
-                                width: 90.0,
-                                child: InkWell(
-                                  onTap: () => widget.controller.scrollToIndex(
-                                      1,
-                                      preferPosition: AutoScrollPosition.begin),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.account_circle_rounded,
-                                          size: 18),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 10.0),
-                                        child: Text(
-                                          'About',
-                                          style: GoogleFonts.roboto(),
-                                        ),
-                                      ),
-                                    ],
+                            child: InkWell(
+                              onTap: () => widget.controller.scrollToIndex(
+                                  1,
+                                  preferPosition: AutoScrollPosition.begin),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.account_circle_rounded,
+                                      size: 18),
+                                  Padding(
+                                    padding:
+                                    const EdgeInsets.only(left: 10.0),
+                                    child: Text(
+                                      'About',
+                                      style: GoogleFonts.roboto(),
+                                    ),
                                   ),
-                                )),
+                                ],
+                              ),
+                            ),
                           ),
                           PopupMenuItem(
                             child: InkWell(
