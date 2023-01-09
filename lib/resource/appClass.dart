@@ -20,7 +20,7 @@ class AppClass {
 
   List<WorkModel> projectList = [
     WorkModel(
-        projectTitle: "CAD Library Module",
+        projectTitle: "Library Module",
         projectContent:
         "AWS/MongoDB 구축 및 마이그레이션, Library 모듈 개발",
         tech1: "Windows",
