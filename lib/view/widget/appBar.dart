@@ -33,7 +33,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Image.asset(
-                        'assets/svg/kcLogo.png',
+                        'assets/svg/appLogo.png',
                         width: AppClass().getMqWidth(context) * 0.9,
                         height: AppClass().getMqHeight(context) * 0.9,
                       ),
@@ -114,7 +114,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
           }
           return Row(
             children: [
-              Expanded(child: Image.asset('assets/svg/kcLogo.png')),
+              Expanded(child: Image.asset('assets/svg/appLogo.png')),
               Expanded(
                 flex: 9,
                 child: Row(
